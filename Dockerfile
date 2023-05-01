@@ -13,7 +13,11 @@ WORKDIR	/ftr-site-config
 RUN	git clone https://github.com/fivefilters/ftr-site-config . 
 
 
+# Do not upgrade. More recent versions of PHP are seg faulting. 
 FROM	php:5-apache
+
+# https://unix.stackexchange.com/questions/371890/debian-the-repository-does-not-have-a-release-file#answer-743863
+RUN 	echo "deb http://archive.debian.org/debian stretch main contrib non-free" > /etc/apt/sources.list
 
 RUN   apt-get update && \
       apt-get -y install --no-install-recommends \

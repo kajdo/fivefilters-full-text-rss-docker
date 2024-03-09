@@ -21,7 +21,7 @@ services:
       # Leave empty to disable admin section
       - FTR_ADMIN_PASSWORD=
     volumes:
-      - "rss-cache:/var/www/html/cache"
+      - "rss-cache:/var/www/html/cache/rss"
     ports:
       - "80:80"
 volumes:

@@ -149,7 +149,7 @@ $options->caching = true;
 // sent in the Full-Text RSS HTTP response.
 // So even if you disable disk caching, this value will still
 // affect the cache headers in the HTTP response.
-$options->cache_time = 120;
+$options->cache_time = 10;
 
 // Cache directory
 // ----------------------
